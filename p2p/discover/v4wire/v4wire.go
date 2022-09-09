@@ -207,9 +207,12 @@ var headSpace = make([]byte, headSize)
 
 // Decode reads a discovery v4 packet.
 func Decode(input []byte) (Packet, Pubkey, []byte, error) {
+	/* yzs_2022_09_09 */
+	/*
 	if len(input) < headSize+1 {
 		return nil, Pubkey{}, nil, ErrPacketTooSmall
 	}
+	*/
 	hash, sig, sigdata := input[:macSize], input[macSize:headSize], input[headSize:]
 	shouldhash := crypto.Keccak256(input[macSize:])
 	if !bytes.Equal(hash, shouldhash) {
