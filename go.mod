@@ -1,5 +1,6 @@
-module github.com/ethereum/go-ethereum
-
+//* yzs_2022_09_10 *
+//module github.com/ethereum/go-ethereum
+module github.com/Nathenial/go-ethereum
 go 1.17
 
 require (
